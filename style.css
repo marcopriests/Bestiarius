@@ -1,0 +1,26 @@
+html{
+    background: url(Background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav img{
+    width: 33%;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+#logoNbar{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#searchbar{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    align-items: center;
+}
