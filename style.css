@@ -9,3 +9,7 @@ html{
     width: 30%;
     align-items: center;
 }
+
+#barChart {
+    pointer-events: none;
+}
