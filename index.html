@@ -19,8 +19,8 @@
 
 <body>
 
-    <div id="logoNbar">
-        <img src="LogoBestiarius.png" width="30%" alt="">
+    <div class="logoNbar">
+        <img class="transform" src="LogoBestiarius.png" alt="">
         <form id="searchbar" autocomplete="off" action="/action_page.php">
             <div class="autocomplete">
                 <input id="input" type="text" placeholder="Inserisci il testo...">
@@ -28,21 +28,22 @@
             <a id="button" class="waves-effect waves-light btn">Search</a>
         </form>
     </div>
-
-    <div class="chart-container" style="position: relative; height:400px; width:800px">
-        <canvas id="barChart"></canvas>
-    </div>
-    <div id="animalCard">
-        <!--scheda animali-->
-        <script id="template" type="text/x-handlebars-template">
+    <div id="container">
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div id="animalCard">
+            <!--scheda animali-->
+            <script id="template" type="text/x-handlebars-template">
             <div>
-                <img src="{{image}}">
+                <img id="img" src="{{image}}">
                 <h6>{{commonName}}</h6>
                 <h6>{{latinName}}</h6>
                 <h6>{{description}}</h6>
                 <h6><a href="{{readMore}}" target="_blank">Leggi di più</a></h6>
             </div>
         </script>
+        </div>
     </div>
 
     <script src="js/animals.js"></script>

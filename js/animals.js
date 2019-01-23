@@ -22,6 +22,11 @@ $.getJSON("js/animalia.json", function (data) {
 
 $("#button").click(function () {
 
+    $(".transform").addClass("transform-active");
+    $(".logoNbar").addClass("logoNbar-active");
+    $("#container").fadeIn("slow");
+    $("#container").css("display", "flex");
+
     $.getJSON("js/animalia.json", function (data) {
         console.log(data.animalia)
 
@@ -66,7 +71,7 @@ $("#button").click(function () {
 
 
                 let barChart = new Chart(CHART, {
-                    type: 'horizontalBar',
+                    type: 'bar',
                     data: {
                         labels: [],
                         datasets: [
@@ -104,7 +109,7 @@ $("#button").click(function () {
                                 },
                                 gridLines: {
                                     display: false,
-                                    drawBorder: false
+                                    drawBorder:  false
                                 }
                             }],
                             xAxes: [{
@@ -113,7 +118,6 @@ $("#button").click(function () {
                                 },
                                 gridLines: {
                                     display: false,
-                                    drawBorder: false
                                 }
                             }]
 
@@ -248,7 +252,7 @@ input.addEventListener("keyup", function (event) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && document.getElementById("input").value != "") {
         // Trigger the button element with a click
         document.getElementById("button").click();
     }
