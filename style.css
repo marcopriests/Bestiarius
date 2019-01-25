@@ -43,6 +43,17 @@ a {
     margin-left: 5px;
 }
 
+#loader {
+    display: none;
+    width: 20%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#loader > img {
+    width: 100%;
+}
+
 #container {
     display: none;
     flex-direction: row-reverse;
